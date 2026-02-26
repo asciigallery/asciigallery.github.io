@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ASCII Great Wave</title>
+<title>ASCII Great Wave — Dramatic</title>
 <style>
     body {
         margin: 0;
-        background: #0b1d2a;
+        background: radial-gradient(circle at 50% 70%, #0f2d44 0%, #081824 60%, #050f18 100%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -19,123 +19,135 @@
         text-align: center;
     }
 
+    h1 {
+        color: #cfe9ff;
+        font-weight: normal;
+        letter-spacing: 4px;
+        font-size: 13px;
+        margin-bottom: 20px;
+        opacity: 0.6;
+    }
+
     pre {
-        color: #9fd3ff;
-        font-size: 14px;
-        line-height: 14px;
-        text-shadow: 0 0 8px rgba(120,190,255,0.6);
-        animation: pulse 4s ease-in-out infinite;
+        color: #bfe6ff;
+        font-size: 13px;
+        line-height: 13px;
+        text-shadow: 0 0 10px rgba(150,220,255,0.7);
+        transition: opacity 0.15s ease;
+    }
+
+    .glow {
+        animation: pulse 5s ease-in-out infinite;
     }
 
     @keyframes pulse {
-        0%   { text-shadow: 0 0 6px rgba(120,190,255,0.4); }
-        50%  { text-shadow: 0 0 16px rgba(120,190,255,0.9); }
-        100% { text-shadow: 0 0 6px rgba(120,190,255,0.4); }
-    }
-
-    h1 {
-        color: #d7ecff;
-        font-weight: normal;
-        letter-spacing: 3px;
-        font-size: 14px;
-        margin-bottom: 20px;
-        opacity: 0.7;
+        0%   { text-shadow: 0 0 6px rgba(150,220,255,0.5); }
+        50%  { text-shadow: 0 0 20px rgba(150,220,255,1); }
+        100% { text-shadow: 0 0 6px rgba(150,220,255,0.5); }
     }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>THE GREAT WAVE — ASCII</h1>
-    <pre id="wave"></pre>
+    <h1>THE GREAT WAVE — FOAM STUDY</h1>
+    <pre id="wave" class="glow"></pre>
 </div>
 
 <script>
 
 const frames = [
 
-`                                                    
-                    ~~~
-                ~~~      ~~~
-            ~~~                ~~~
-        ~~~                        ~~~
-    ~~~                               ~~~
-  ~~                                     ~~~
- ~~         /\                               ~~
-~~         /  \        /\                      ~~
-          /    \      /  \                       ~~
-         /      \    /    \                        ~~
-        /        \  /      \                         ~~
-       /          \/        \__                        ~~
-      /                         \___                     ~~
-     /                              \____                  ~~
-    /                                   \____               ~~
-___/                                        \____            ~~
-`,
-
-`                                                    
-                ~~~
-            ~~~      ~~~
-        ~~~                ~~~
-    ~~~                        ~~~
-  ~~                               ~~~
- ~~                                     ~~~
-~~             /\                            ~~
-              /  \        /\                   ~~
-             /    \      /  \                    ~~
-            /      \    /    \                     ~~
-           /        \  /      \__                    ~~
-          /          \/           \___                 ~~
-         /                            \____              ~~
-        /                                 \____           ~~
-_______/                                      \____        ~~
-`,
-
-`                                                    
-            ~~~
-        ~~~      ~~~
-    ~~~                ~~~
-  ~~                        ~~~
- ~~                               ~~~
-~~                                     ~~~
-                /\                          ~~
-               /  \        /\                 ~~
-              /    \      /  \                  ~~
-             /      \    /    \                   ~~
-            /        \  /      \__                  ~~
-           /          \/            \___              ~~
-          /                                \____       ~~
-_________/                                     \____    ~~
-`,
-
-`                                                    
-                ~~~
-            ~~~      ~~~
-        ~~~                ~~~
-    ~~~                        ~~~
-  ~~                               ~~~
- ~~                                     ~~~
-~~         /\                               ~~
-          /  \        /\                      ~~
-         /    \      /  \                       ~~
-        /      \    /    \                        ~~
-       /        \  /      \__                        ~~
-      /          \/           \___                     ~~
-     /                            \____                  ~~
-    /                                 \____               ~~
-___/                                      \____            ~~
 `
+
+
+                              .                     .
+                           .        .         .
+                .  .              .      .           .
+                        .      .        .         .
+
+                                 /\ 
+                                /  \        <-- Mt Fuji
+                               /____\
+
+             ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+                     .-^^^^^^-.
+                 .-^^            ^^-.
+              .^^      _.-^^^^-._       ^^.
+            .^        /   .-^^^-.   \\        ^.
+           /        /   .^  .-^^^-.  ^.    \\        \\
+          /       /   .^   /        \\   ^.    \\       \\
+         /      /   .^    /          \\    ^.    \\      \\
+        /     /   .^     /            \\     ^.    \\     \\
+       /    /   .^      /              \\      ^.    \\    \\
+      /   /   .^      _/                \\_      ^.    \\   \\
+     /  /   .^      .^    .-^^^^^^-.     ^.      ^.    \\  \\
+    /_/___/^_______/^_____/            \\_____^_______^_____\\__
+`,
+
+`
+
+                              .                .
+                        .          .       .
+                  .         .           .
+
+                                 /\ 
+                                /  \ 
+                               /____\
+
+           ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+                     .-^^^^^^-.
+                 .-^^            ^^-.
+              .^^    _.-^^^^^^-._      ^^.
+            .^      /   .-^^^^^^-.   \\     ^.
+           /      /   .^  .-^^^^^^-.  ^.    \\      \\
+          /     /   .^   /            \\   ^.    \\     \\
+         /    /   .^    /              \\    ^.    \\     \\
+        /   /   .^     /                \\     ^.    \\    \\
+       /  /   .^      /                  \\      ^.    \\   \\
+      /_/___/^_______/^_____.-^^^^^^^^-.___\\______^____\\__\\__
+              ^  ^  ^  ^  ^  ^  ^  ^  ^  ^   foam claws
+`,
+
+`
+
+                           .         .
+                      .          .        .
+                .           .         .
+
+                                 /\ 
+                                /  \ 
+                               /____\
+
+      ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+                .-^^^^^^^^-.
+             .-^^              ^^-.
+          .^^   _.-^^^^^^^^^^-._     ^^.
+        .^     /   .-^^^^^^^^^^^-.   \\    ^.
+       /     /   .^  .-^^^^^^^^^^^-.  ^.   \\     \\
+      /    /   .^   /                \\   ^.   \\    \\
+     /   /   .^    /                  \\    ^.   \\    \\
+    /  /   .^     /                    \\     ^.   \\   \\
+   /_/___/^_______/^_____.-^^^^^^^^^^^^-.__\\______^____\\__
+           ^^^ ^^^ ^^^ ^^^ ^^^ ^^^ ^^^  exploding foam
+`
+
 ];
 
 let frame = 0;
 const wave = document.getElementById("wave");
 
 function animate() {
+    wave.style.opacity = 0.85;
+    setTimeout(() => wave.style.opacity = 1, 50);
     wave.textContent = frames[frame];
     frame = (frame + 1) % frames.length;
 }
 
-setInterval(animate, 180);
+setInterval(animate, 220);
 animate();
 
 </script>
