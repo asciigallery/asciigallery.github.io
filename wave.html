@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASCII Great Wave</title>
+<style>
+    body {
+        margin: 0;
+        background: #0b1d2a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        font-family: monospace;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    pre {
+        color: #9fd3ff;
+        font-size: 14px;
+        line-height: 14px;
+        text-shadow: 0 0 8px rgba(120,190,255,0.6);
+        animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%   { text-shadow: 0 0 6px rgba(120,190,255,0.4); }
+        50%  { text-shadow: 0 0 16px rgba(120,190,255,0.9); }
+        100% { text-shadow: 0 0 6px rgba(120,190,255,0.4); }
+    }
+
+    h1 {
+        color: #d7ecff;
+        font-weight: normal;
+        letter-spacing: 3px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        opacity: 0.7;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>THE GREAT WAVE — ASCII</h1>
+    <pre id="wave"></pre>
+</div>
+
+<script>
+
+const frames = [
+
+`                                                    
+                    ~~~
+                ~~~      ~~~
+            ~~~                ~~~
+        ~~~                        ~~~
+    ~~~                               ~~~
+  ~~                                     ~~~
+ ~~         /\                               ~~
+~~         /  \        /\                      ~~
+          /    \      /  \                       ~~
+         /      \    /    \                        ~~
+        /        \  /      \                         ~~
+       /          \/        \__                        ~~
+      /                         \___                     ~~
+     /                              \____                  ~~
+    /                                   \____               ~~
+___/                                        \____            ~~
+`,
+
+`                                                    
+                ~~~
+            ~~~      ~~~
+        ~~~                ~~~
+    ~~~                        ~~~
+  ~~                               ~~~
+ ~~                                     ~~~
+~~             /\                            ~~
+              /  \        /\                   ~~
+             /    \      /  \                    ~~
+            /      \    /    \                     ~~
+           /        \  /      \__                    ~~
+          /          \/           \___                 ~~
+         /                            \____              ~~
+        /                                 \____           ~~
+_______/                                      \____        ~~
+`,
+
+`                                                    
+            ~~~
+        ~~~      ~~~
+    ~~~                ~~~
+  ~~                        ~~~
+ ~~                               ~~~
+~~                                     ~~~
+                /\                          ~~
+               /  \        /\                 ~~
+              /    \      /  \                  ~~
+             /      \    /    \                   ~~
+            /        \  /      \__                  ~~
+           /          \/            \___              ~~
+          /                                \____       ~~
+_________/                                     \____    ~~
+`,
+
+`                                                    
+                ~~~
+            ~~~      ~~~
+        ~~~                ~~~
+    ~~~                        ~~~
+  ~~                               ~~~
+ ~~                                     ~~~
+~~         /\                               ~~
+          /  \        /\                      ~~
+         /    \      /  \                       ~~
+        /      \    /    \                        ~~
+       /        \  /      \__                        ~~
+      /          \/           \___                     ~~
+     /                            \____                  ~~
+    /                                 \____               ~~
+___/                                      \____            ~~
+`
+];
+
+let frame = 0;
+const wave = document.getElementById("wave");
+
+function animate() {
+    wave.textContent = frames[frame];
+    frame = (frame + 1) % frames.length;
+}
+
+setInterval(animate, 180);
+animate();
+
+</script>
+
+</body>
+</html>
