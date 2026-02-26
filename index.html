@@ -16,9 +16,9 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    font-family: 'Share Tech Mono', monospace;
-    color: #ffffff;
+    background: #f7c948; /* soft modern yellow */
+    font-family: 'Courier New', monospace;
+    color: #222;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,16 +26,16 @@ body {
 
 header {
     text-align: center;
-    padding: 50px 20px 20px;
+    padding: 60px 20px 30px;
 }
 
 header h1 {
     font-size: 42px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 header p {
-    color: #bbbbbb;
+    color: #444;
     margin-top: 10px;
 }
 
@@ -45,22 +45,21 @@ header p {
     gap: 30px;
     padding: 40px;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.05);
+    background: #ffffff;
     border-radius: 15px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
+    padding: 25px;
     transition: 0.3s ease;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
 pre {
@@ -73,7 +72,7 @@ footer {
     text-align: center;
     padding: 30px;
     margin-top: auto;
-    color: #aaa;
+    color: #333;
     font-size: 14px;
 }
 </style>
