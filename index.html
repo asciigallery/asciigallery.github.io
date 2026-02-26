@@ -1,41 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASCII Art Gallery</title>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>ASCII art gallery sample</title>
-    
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-  </head>
-    
-  <body>
-  <pre>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #bbbbbb;
+    margin-top: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+pre {
+    white-space: pre;
+    font-size: 18px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+    color: #aaa;
+    font-size: 14px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>ASCII Art Gallery</h1>
+    <p>A modern collection of text-based creativity</p>
+</header>
+
+<section class="gallery">
+
+    <div class="card">
+        <pre>
 w i t h  pre tag
  -----
 |  @  |
 |  |  |
 |  V  |
  -----
-</pre>
+        </pre>
+    </div>
 
-<pre>
-
+    <div class="card">
+        <pre>
  -----
 | ..  |
 |  v  |
 |  =  |
  -----
-</pre>
+        </pre>
+    </div>
 
-<pre>
-
+    <div class="card">
+        <pre>
  -----
 |  .  |
 | 8 / |
 |  || |
  -----
-</pre>
-    
-  </body>
-  
+        </pre>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Your Name | Built with HTML & CSS
+</footer>
+
+</body>
 </html>
